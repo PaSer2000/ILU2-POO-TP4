@@ -1,18 +1,20 @@
 package produit;
 
-public abstract class Produit {
+public abstract class Produit implements IProduit {
 	private String nom;
-	private String unité;
+	private String unite;
 	
-	protected Produit(String nom, String unité) {
+	protected Produit(String nom, String unite) {
 		this.nom = nom;
-		this.unité = unité;
+		this.unite = unite;
 	}
 
+	@Override
 	public String getNom() {
 		return nom;
 	}
 	
+	@Override
 	public abstract String decrireProduit();
 
 }
